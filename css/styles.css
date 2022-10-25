@@ -29,6 +29,8 @@ body {
 /* Reset start */
 ul {
   padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 h1,
@@ -77,14 +79,18 @@ img {
 }
 
 /* Header */
+.header-border {
+  display: flex;
+  border-bottom: 1px solid #ececec;
+}
+
 .header-container {
   display: flex;
   align-items: center;
 }
-.nav-list {
-  display: flex;
-  align-items: center;
-  margin-left: 93px;
+
+.logo-container {
+  margin-right: 93px;
 }
 
 .logo,
@@ -103,7 +109,12 @@ img {
   color: var(--accent-color);
 }
 
-.header-nav:not(:last-child) {
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list :not(:last-child) {
   margin-right: 50px;
 }
 
@@ -145,10 +156,8 @@ img {
 
 /* HERO */
 .hero {
-  width: 1200px;
-  height: 600px;
   margin: auto;
-  padding: 200px 15px;
+  padding: 200px 0px;
   text-align: center;
   background: var(--background-bgh-bgf-color);
 }
@@ -169,9 +178,6 @@ img {
 
 .hero-btn {
   margin-top: 30px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 200px;
   border-radius: 4px;
   min-width: 216px;
   padding: 10px 32px;
@@ -203,14 +209,13 @@ img {
 }
 
 .quality-section {
-  display: flex;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .quality-list {
   display: flex;
   padding-left: 0%;
-  margin-top: 94px;
-  margin-bottom: 94px;
 }
 
 .quality-item:not(:last-child) {
@@ -239,6 +244,9 @@ img {
 
 /* ABOUT */
 
+.about {
+  padding-bottom: 94px;
+}
 .about-titel {
   flex-basis: 366px;
   margin-bottom: 50px;
@@ -260,12 +268,10 @@ img {
 
 /* OUR STAFF */
 .staff {
-  background-color: var(--background-bgsection-color);
-}
-
-.staff-titel {
-  flex-basis: 264px;
   padding-top: 94px;
+  padding-bottom: 94px;
+
+  background-color: var(--background-bgsection-color);
 }
 
 .staff-list {
@@ -273,16 +279,19 @@ img {
   margin-top: 50px;
   margin-bottom: 0px;
   gap: 30px;
-  padding-bottom: 94px;
 }
+
 .staff-item {
   border-radius: 0px 0px 4px 4px;
   background-color: var(--second-color);
-  padding-bottom: 30px;
 }
+
+.staff-name-container {
+  padding: 30px 0;
+}
+
 .staff-name {
-  padding-top: 30px;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 
   font-weight: 500;
   font-size: 16px;
@@ -302,17 +311,18 @@ img {
 
 /* FOOTER */
 .footer {
+  padding: 60px 0;
   background-color: var(--background-bgh-bgf-color);
 }
 
 .container-footer {
   width: 1200px;
   margin: 0 auto;
-  padding: 60px 15px;
+  padding: 0 15px;
 }
 
-.logo-footer {
-  margin-bottom: 20px;
+address {
+  margin-top: 20px;
 }
 .accent-part.footer.logo {
   color: var(--second-color);
@@ -327,9 +337,11 @@ img {
   letter-spacing: 0.03em;
   color: var(--second-color);
 }
-.adress-item-contacs {
+.adress-item-contacs :not(:last-child) {
   margin-bottom: 9px;
+}
 
+.adress-item-contacs {
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
@@ -341,15 +353,18 @@ img {
 
 /* OUR WORKS */
 
-.buttons-container {
+.section-container {
+  padding: 94px 0;
+}
+.gallery-container {
   width: 1200px;
-  margin: 94px auto 50px;
+  margin: 0 auto 0;
   padding: 0 15px;
 }
 .buttons-list {
   display: flex;
   justify-content: center;
-  margin: auto;
+  margin-bottom: 50px;
 }
 
 .buttons-item:not(:last-child) {
@@ -390,9 +405,7 @@ img {
 }
 
 .border-contair {
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-bottom: 20px;
+  padding: 20px 10px 20px 20px;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
@@ -403,7 +416,6 @@ img {
 }
 
 .projects-item-titel {
-  width: 322px;
   margin-bottom: 4px;
 
   font-weight: 700;
